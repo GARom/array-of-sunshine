@@ -42,7 +42,7 @@ function spliceString(str, char) {
 function speakPigLatin(strArray) {
  var array = [];
 
- var changedArr = str.strArray.map(function(x){
+ var changedArr = strArray.map(function(x){
     return x.substring(1,x.length).concat(x[0]).concat("ay");
  });
  return changedArr;
