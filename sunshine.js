@@ -5,7 +5,13 @@
   Bonus: Use RegEx to create the array
 */
 function reverseString(str) {
+  var arr = str.match(/[a-zA-Z ]/g); // ["w", "o""]
+  var revStr = "";
 
+  for( i=arr.length-1; i>=0; i--) {
+      revStr+=arr[i];
+  }
+  return revStr;
 }
 
 /**
@@ -17,8 +23,14 @@ function reverseString(str) {
   Then convert the array to a string and return it.
 */
 function spliceString(str, char) {
+  var arr = str.split("");
+    arr.splice(0,0, arr[arr.length-1]);
+    arr.splice(-2,0,char);
+  var string = arr.join("");
+  var condense = string.substring(0,string.length-1);
+    return condense;
+  }
 
-}
 
 /**
   Using the Array map() method write a function that takes an array
@@ -28,5 +40,11 @@ function spliceString(str, char) {
   Instead of "ickenchay", it should just become "hickencay".
 */
 function speakPigLatin(strArray) {
+ var array = [];
 
+ var changedArr = str.strArray.map(function(x){
+    return x.substring(1,x.length).concat(x[0]).concat("ay");
+ });
+ return changedArr;
+ 
 }
